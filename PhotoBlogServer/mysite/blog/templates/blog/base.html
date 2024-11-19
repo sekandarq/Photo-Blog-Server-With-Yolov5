@@ -1,0 +1,47 @@
+<!-- blog/post_list.html -->
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>My Photo Blog</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+
+        <style>
+            body {
+                padding-top: 50px;
+            }
+             
+            .blog-image-list {
+                width: 80%;
+                height: 60%;
+                border-radius: 10px;
+            }
+
+            h1 a {
+                color: darkgreen;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <header>
+          <div class = "page-header">
+            <center>
+              <h1><a href="/"> Photo Blog</a></h1>
+            </center>
+            <hr align="center" width="50%"></hr>
+          </div>
+        </header>
+
+        <main>
+                {% block content %}
+                {% endblock %}
+        </main>
+    </body>
+   
+</html>
